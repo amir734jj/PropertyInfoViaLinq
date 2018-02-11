@@ -2,6 +2,8 @@
 
 This simple project grabs property name using Linq. Inspired by [this](https://stackoverflow.com/a/2916344/1834787) awesome StackOverFlow post.
 
+[Nuget Link](https://www.nuget.org/packages/GetPropertyInfoViaLinq/)
+
 Get property info via Linq's Expression
 
 ```csharp
