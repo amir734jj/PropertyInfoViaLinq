@@ -1,0 +1,8 @@
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq\bin\Debug\netstandard2.0\GetPropertyNameViaLinq.deps.json
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq\bin\Debug\netstandard2.0\GetPropertyNameViaLinq.dll
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq\bin\Debug\netstandard2.0\GetPropertyNameViaLinq.pdb
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq\obj\Debug\netstandard2.0\GetPropertyNameViaLinq.csproj.CoreCompileInputs.cache
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq\obj\Debug\netstandard2.0\GetPropertyNameViaLinq.AssemblyInfoInputs.cache
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq\obj\Debug\netstandard2.0\GetPropertyNameViaLinq.AssemblyInfo.cs
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq\obj\Debug\netstandard2.0\GetPropertyNameViaLinq.dll
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq\obj\Debug\netstandard2.0\GetPropertyNameViaLinq.pdb

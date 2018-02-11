@@ -1,0 +1,15 @@
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.deps.json
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.runtimeconfig.json
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.runtimeconfig.dev.json
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.dll
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.pdb
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\GetPropertyNameViaLinq.dll
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\bin\Debug\netcoreapp2.0\GetPropertyNameViaLinq.pdb
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\obj\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.csproj.CoreCompileInputs.cache
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\obj\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.AssemblyInfoInputs.cache
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\obj\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.AssemblyInfo.cs
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\obj\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.dll
+C:\workspace\GetPropertyNameViaLinq\GetPropertyNameViaLinq.Tests\obj\Debug\netcoreapp2.0\GetPropertyNameViaLinq.Tests.pdb
