@@ -5,11 +5,11 @@ using static GetPropertyInfoViaLinq.Tests.Utility;
 
 namespace GetPropertyInfoViaLinq.Tests
 {
-    public class GetAttributeViaLinq
+    public class GetAttributeViaLinqTests
     {
         private readonly IGetPropertyInfoViaLinq<Person> _utility;
 
-        public GetAttributeViaLinq()
+        public GetAttributeViaLinqTests()
         {
             _utility = new GetPropertyInfoViaLinq<Person>();
         }
