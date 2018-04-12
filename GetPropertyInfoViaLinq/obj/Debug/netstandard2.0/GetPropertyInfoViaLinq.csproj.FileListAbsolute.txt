@@ -1,8 +1,0 @@
-C:\workspace\GetPropertyInfoViaLinq\GetPropertyInfoViaLinq\bin\Debug\netstandard2.0\GetPropertyInfoViaLinq.deps.json
-C:\workspace\GetPropertyInfoViaLinq\GetPropertyInfoViaLinq\bin\Debug\netstandard2.0\GetPropertyInfoViaLinq.dll
-C:\workspace\GetPropertyInfoViaLinq\GetPropertyInfoViaLinq\bin\Debug\netstandard2.0\GetPropertyInfoViaLinq.pdb
-C:\workspace\GetPropertyInfoViaLinq\GetPropertyInfoViaLinq\obj\Debug\netstandard2.0\GetPropertyInfoViaLinq.csproj.CoreCompileInputs.cache
-C:\workspace\GetPropertyInfoViaLinq\GetPropertyInfoViaLinq\obj\Debug\netstandard2.0\GetPropertyInfoViaLinq.AssemblyInfoInputs.cache
-C:\workspace\GetPropertyInfoViaLinq\GetPropertyInfoViaLinq\obj\Debug\netstandard2.0\GetPropertyInfoViaLinq.AssemblyInfo.cs
-C:\workspace\GetPropertyInfoViaLinq\GetPropertyInfoViaLinq\obj\Debug\netstandard2.0\GetPropertyInfoViaLinq.dll
-C:\workspace\GetPropertyInfoViaLinq\GetPropertyInfoViaLinq\obj\Debug\netstandard2.0\GetPropertyInfoViaLinq.pdb

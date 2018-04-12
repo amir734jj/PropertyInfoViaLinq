@@ -7,3 +7,12 @@ Sqlite.ORM.Tests/obj
 
 .vs
 .idea
+GetPropertyInfoViaLinq/bin/
+
+GetPropertyInfoViaLinq/obj/
+
+GetPropertyInfoViaLinq\.Tests/bin/
+
+GetPropertyInfoViaLinq\.Tests/obj/
+
+GetPropertyInfoViaLinq\.Tests/ForReadme\.cs

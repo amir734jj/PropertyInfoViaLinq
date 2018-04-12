@@ -36,6 +36,16 @@ namespace GetPropertyInfoViaLinq
         }
 
         /// <summary>
+        /// Returns the property info via linq
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        public virtual PropertyInfo GetPropertyInfo(Expression<Func<T, object>> expression)
+        {
+            return ToMemeberExpression(expression)?.Member as PropertyInfo;
+        }
+
+        /// <summary>
         /// Returns member name of member expression
         /// </summary>
         /// <param name="memberExpression"></param>
