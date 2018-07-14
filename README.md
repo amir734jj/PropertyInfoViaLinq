@@ -14,9 +14,6 @@ _utility.GetPropertyName(x => x.Parents.GreatParents.Parents.FatherName);
 
 // returns custom attributes via linq
 _utility.GetAttribute(x => x.Parents.GreatParents.Parents.FatherName, typeof(DisplayAttribute));
-
-// returns PropertyInfo of "FatherName" via linq
-_utility.GetPropertyInfo(x => x.Parents.GreatParents.Parents.FatherName);
 ```
 
 Notes:
