@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using GetPropertyInfoViaLinq.Interfaces;
+using GetPropertyInfoViaLinq.Tests.Models;
 using Xunit;
-using static GetPropertyInfoViaLinq.Tests.Utility;
+using static GetPropertyInfoViaLinq.Tests.Utilities.PersonUtility;
 
 namespace GetPropertyInfoViaLinq.Tests
 {
@@ -11,7 +12,7 @@ namespace GetPropertyInfoViaLinq.Tests
 
         public GetAttributeViaLinqTests()
         {
-            _utility = new GetPropertyInfoViaLinq<Person>();
+            _utility = GetPropertyInfoViaLinq<Person>.New();
         }
         
         [Fact]
@@ -19,10 +20,10 @@ namespace GetPropertyInfoViaLinq.Tests
         {
             // Arrange
             var lambda = LambdaToExp(x => x.FirstName);
-            var expected = $"Attribute.FirstName";
+            const string expected = "Attribute.FirstName";
 
             // Act
-            var result = (_utility.GetAttribute(lambda, typeof(DisplayAttribute)) as DisplayAttribute)?.Name;
+            var result = _utility.Lambda(lambda).GetAttribute<DisplayAttribute>()?.Name;
 
             // Assert
             Assert.Equal(expected, result);
@@ -33,10 +34,10 @@ namespace GetPropertyInfoViaLinq.Tests
         {
             // Arrange
             var lambda = LambdaToExp(x => x.Parents.MotherName);
-            var expected = "Attribute.MotherName";
+            const string expected = "Attribute.MotherName";
 
             // Act
-            var result = (_utility.GetAttribute(lambda, typeof(DisplayAttribute)) as DisplayAttribute)?.Name;
+            var result = _utility.Lambda(lambda).GetAttribute<DisplayAttribute>()?.Name;
 
             // Assert
             Assert.Equal(expected, result);
@@ -47,10 +48,10 @@ namespace GetPropertyInfoViaLinq.Tests
         {
             // Arrange
             var lambda = LambdaToExp(x => x.Parents.GreatParents.FirstName);
-            var expected = $"Attribute.FirstName";
+            const string expected = "Attribute.FirstName";
 
             // Act
-            var result = (_utility.GetAttribute(lambda, typeof(DisplayAttribute)) as DisplayAttribute)?.Name;
+            var result = _utility.Lambda(lambda).GetAttribute<DisplayAttribute>()?.Name;
 
             // Assert
             Assert.Equal(expected, result);

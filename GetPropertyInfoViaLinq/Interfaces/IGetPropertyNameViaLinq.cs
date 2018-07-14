@@ -4,14 +4,16 @@ using System.Reflection;
 
 namespace GetPropertyInfoViaLinq.Interfaces
 {
-    public interface IGetPropertyInfoViaLinq<T>
+    /// <summary>
+    /// Initialized instance of Utility
+    /// </summary>
+    /// <typeparam name="TSource"></typeparam>
+    public interface IGetPropertyInfoViaLinq<TSource>
     {
-        string GetPropertyName(Expression<Func<T, object>> expression);
+        MemberExpression ToMemeberExpression<TResult>(Expression<Func<TSource, TResult>> exp);
         
-        MemberExpression ToMemeberExpression(Expression<Func<T, object>> expression);
+        IGetInfo<TSource> Lambda(Expression<Func<TSource, object>> expr);
         
-        PropertyInfo GetPropertyInfo(Expression<Func<T, object>> expression);
-        
-        Attribute GetAttribute(Expression<Func<T, object>> expression, Type attributeType);
+        IGetInfo<TSource> Lambda<TResult>(Expression<Func<TSource, TResult>> expr);
     }
 }

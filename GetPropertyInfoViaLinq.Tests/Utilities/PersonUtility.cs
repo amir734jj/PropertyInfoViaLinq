@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq.Expressions;
+using GetPropertyInfoViaLinq.Tests.Models;
 
-namespace GetPropertyInfoViaLinq.Tests
+namespace GetPropertyInfoViaLinq.Tests.Utilities
 {
-    public class Utility
+    public class PersonUtility
     {
         /// <summary>
         /// Converts Func to lambda of Func

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq.Expressions;
 using GetPropertyInfoViaLinq.Interfaces;
-using GetPropertyNameViaLinq;
+using GetPropertyInfoViaLinq.Tests.Models;
 using Xunit;
-using static GetPropertyInfoViaLinq.Tests.Utility;
+using static GetPropertyInfoViaLinq.Tests.Utilities.PersonUtility;
 
 namespace GetPropertyInfoViaLinq.Tests
 {
@@ -21,10 +21,10 @@ namespace GetPropertyInfoViaLinq.Tests
         {
             // Arrange
             var lambda = LambdaToExp(x => x.Age);
-            var expected = "Age";
+            const string expected = "Age";
 
             // Act
-            var result = _utility.GetPropertyName(lambda);
+            var result = _utility.Lambda(lambda).GetPropertyName();
 
             // Assert
             Assert.Equal(expected, result);
@@ -35,10 +35,10 @@ namespace GetPropertyInfoViaLinq.Tests
         {
             // Arrange
             var lambda = LambdaToExp(x => x.Parents);
-            var expected = "Parents";
+            const string expected = "Parents";
 
             // Act
-            var result = _utility.GetPropertyName(lambda);
+            var result = _utility.Lambda(lambda).GetPropertyName();
 
             // Assert
             Assert.Equal(expected, result);
@@ -49,10 +49,10 @@ namespace GetPropertyInfoViaLinq.Tests
         {
             // Arrange
             var lambda = LambdaToExp(x => x.Parents.FatherName);
-            var expected = "Parents.FatherName";
+            const string expected = "Parents.FatherName";
 
             // Act
-            var result = _utility.GetPropertyName(lambda);
+            var result = _utility.Lambda(lambda).GetPropertyName();
 
             // Assert
             Assert.Equal(expected, result);
@@ -63,10 +63,10 @@ namespace GetPropertyInfoViaLinq.Tests
         {
             // Arrange
             var lambda = LambdaToExp(x => x.Parents.GreatParents.Parents.GreatParents.Parents.MotherName);
-            var expected = "Parents.GreatParents.Parents.GreatParents.Parents.MotherName";
+            const string expected = "Parents.GreatParents.Parents.GreatParents.Parents.MotherName";
 
             // Act
-            var result = _utility.GetPropertyName(lambda);
+            var result = _utility.Lambda(lambda).GetPropertyName();
 
             // Assert
             Assert.Equal(expected, result);
@@ -77,10 +77,10 @@ namespace GetPropertyInfoViaLinq.Tests
         {
             // Arrange
             var lambda = LambdaToExp(x => x.Parents.GreatParents.Parents.GreatParents.Parents.GreatParents.Age);
-            var expected = "Parents.GreatParents.Parents.GreatParents.Parents.GreatParents.Age";
+            const string expected = "Parents.GreatParents.Parents.GreatParents.Parents.GreatParents.Age";
 
             // Act
-            var result = _utility.GetPropertyName(lambda);
+            var result = _utility.Lambda(lambda).GetPropertyName();
 
             // Assert
             Assert.Equal(expected, result);

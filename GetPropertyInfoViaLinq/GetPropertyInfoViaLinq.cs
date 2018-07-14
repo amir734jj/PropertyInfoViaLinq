@@ -2,18 +2,22 @@
 using System.Linq.Expressions;
 using System.Reflection;
 using GetPropertyInfoViaLinq.Interfaces;
-using GetPropertyNameViaLinq;
+using GetPropertyInfoViaLinq.Utilities;
 
 namespace GetPropertyInfoViaLinq
 {
-    public class GetPropertyInfoViaLinq<T> : IGetPropertyInfoViaLinq<T>
+    /// <summary>
+    /// Utility to get property info via linq expression
+    /// </summary>
+    /// <typeparam name="TSource"></typeparam>
+    public class GetPropertyInfoViaLinq<TSource> : BaseBuilder<GetPropertyInfoViaLinq<TSource>>, IGetPropertyInfoViaLinq<TSource>
     {
         /// <summary>
         /// Converts lambda expression to member expression
         /// </summary>
         /// <param name="exp"></param>
         /// <returns></returns>
-        public virtual MemberExpression ToMemeberExpression(Expression<Func<T, object>> exp)
+        public virtual MemberExpression ToMemeberExpression<TResult>(Expression<Func<TSource, TResult>> exp)
         {
             MemberExpression resultExp;
             var body = exp.Body;
@@ -36,66 +40,24 @@ namespace GetPropertyInfoViaLinq
         }
 
         /// <summary>
-        /// Returns the property info via linq
+        /// GetInfo given member expression
         /// </summary>
-        /// <param name="expression"></param>
+        /// <param name="expr"></param>
         /// <returns></returns>
-        public virtual PropertyInfo GetPropertyInfo(Expression<Func<T, object>> expression)
+        public IGetInfo<TSource> Lambda(Expression<Func<TSource, object>> expr)
         {
-            return ToMemeberExpression(expression)?.Member as PropertyInfo;
+            return new GetInfo<TSource>(ToMemeberExpression(expr));
         }
 
         /// <summary>
-        /// Returns member name of member expression
+        /// Get info given member expression
         /// </summary>
-        /// <param name="memberExpression"></param>
+        /// <param name="expr"></param>
+        /// <typeparam name="TResult"></typeparam>
         /// <returns></returns>
-        protected virtual string GetMemberExpressionName(MemberExpression memberExpression)
+        public IGetInfo<TSource> Lambda<TResult>(Expression<Func<TSource, TResult>> expr)
         {
-            return memberExpression.Member.Name;
-        }
-
-        /// <summary>
-        /// Returns property name using lambda
-        /// </summary>
-        /// <param name="expression"></param>
-        /// <returns></returns>
-        public string GetPropertyName(Expression<Func<T, object>> expression)
-        {
-            // convert lambda arg to memeber expression safely
-            var memberExpresion = ToMemeberExpression(expression);
-            
-            // create a list of property names
-            var nameTokens = new LinkedListWithInit<string>() { GetMemberExpressionName(memberExpresion) };
-            
-            // get nested expression
-            var parentExp = memberExpresion.Expression;
-
-            // while nested expression is member expression
-            while (parentExp is MemberExpression parentMemberExpression)
-            {
-                // add string property name to the list
-                nameTokens.AddFirst(GetMemberExpressionName(parentMemberExpression));
-
-                // reset the parentExp to go one more level deep 
-                parentExp = parentMemberExpression.Expression;
-            }
-
-            // joun the tokens together
-            return string.Join(".", nameTokens);
-        }
-
-        /// <summary>
-        /// Returns a attribute via linq
-        /// </summary>
-        /// <param name="expression"></param>
-        /// <param name="attributeType"></param>
-        /// <returns></returns>
-        public virtual Attribute GetAttribute(Expression<Func<T, object>> expression, Type attributeType)
-        {
-            var memberExpression = ToMemeberExpression(expression);
-
-            return memberExpression.Member.GetCustomAttribute(attributeType);
+            return new GetInfo<TSource>(ToMemeberExpression(expr));
         }
     }
 }

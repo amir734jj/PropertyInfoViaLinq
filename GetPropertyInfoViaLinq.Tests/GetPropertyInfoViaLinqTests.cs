@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using GetPropertyInfoViaLinq.Interfaces;
+using GetPropertyInfoViaLinq.Tests.Models;
 using Xunit;
-using static GetPropertyInfoViaLinq.Tests.Utility;
+using static GetPropertyInfoViaLinq.Tests.Utilities.PersonUtility;
 
 namespace GetPropertyInfoViaLinq.Tests
 {
@@ -23,7 +24,7 @@ namespace GetPropertyInfoViaLinq.Tests
             var expected = typeof(Person).GetProperties().First(x => x.Name == "FirstName");
 
             // Act
-            var result = _utility.GetPropertyInfo(lambda);
+            var result = _utility.Lambda(lambda).GetPropertyInfo();
 
             // Assert
             Assert.Equal(expected, result);
@@ -37,7 +38,7 @@ namespace GetPropertyInfoViaLinq.Tests
             var expected = typeof(NestedPersonInfo).GetProperties().First(x => x.Name == "MotherName");
 
             // Act
-            var result = _utility.GetPropertyInfo(lambda);
+            var result = _utility.Lambda(lambda).GetPropertyInfo();
 
             // Assert
             Assert.Equal(expected, result);

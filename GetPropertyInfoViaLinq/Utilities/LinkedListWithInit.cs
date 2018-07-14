@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GetPropertyNameViaLinq
+namespace GetPropertyInfoViaLinq.Utilities
 {
     public class LinkedListWithInit<T> : LinkedList<T>
     {
